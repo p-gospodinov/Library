@@ -1,0 +1,57 @@
+CREATE TABLE books (
+    BookID INT AUTO_INCREMENT PRIMARY KEY,
+    BookTitle VARCHAR(255),
+    Genre VARCHAR(255),
+    Pages INT,
+    Rating INT,
+    AuthorID INT,
+    InPublic BOOLEAN,
+    FOREIGN KEY (AuthorID) REFERENCES users(UserID)
+);
+CREATE TABLE users(
+UserID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Name varchar(255) NOT NULL,
+Username varchar(255),
+Password varchar(255),
+Role varchar(255)
+);
+
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Lana Ferguson','user1','1234','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Hannah Grace','user2','0000','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Stephanie Garber','user3','1214','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Jennifer L. Armentrout','user4','0300','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Sarah J. Maas','user5','1244','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Rebecca Yarros','user6','0540','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Стефани Гарбър','user7','1344','AUTHOR');
+INSERT INTO users  (Name ,Username,Password,Role) Values
+('Ali Hazelwood','user8','1300','AUTHOR');
+
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('The Fake Mate', 'Romance', 400, 7, 1,true);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('House of Earth and Blood', 'Fantasy', 803, 7, 5,FALSE);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Fourth Wing', 'Fantasy', 498, 9, 6,true);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Iron Flame', 'Fantasy', 640, 7, 6,FALSE);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('From Blood and Ash', 'Fantasy', 622, 7, 4,true);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('A Kingdom of Flesh and Fire', 'Fantasy', 637, 8, 4,FALSE);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('The ​Crown of Gilded Bones', 'Fantasy', 645, 9, 4,true);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Caraval', 'Fantasy', 407, 7, 3,FALSE);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Icebreaker', 'Fantasy', 435, 8, 2,FALSE);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Wildfire', 'Romance', 383, 9, 2,true);
+INSERT INTO books (BookTitle, Genre, Pages, Rating, AuthorID,InPublic) VALUES
+('Caraval', 'Romance', 407, 7, 3,FALSE);
